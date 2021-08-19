@@ -1,0 +1,65 @@
+<html>
+<head>
+	<script>
+	function add()
+	{
+		var op;
+		var se=document.getElementById("s");
+		var st=document.getElementById("st");
+		if(st.value==1)
+		{
+		var i;
+		var len=se.options.length;
+		for(i=len-1;i>=0;i--)
+		{
+		se.remove(i);
+		}
+		op=document.createElement("option");
+		op.text="Varanasi";
+		se.add(op);
+		op=document.createElement("option");
+		op.text="Allahabad";
+		se.add(op);
+		op=document.createElement("option");
+		op.text="Gazipur";
+		se.add(op);
+		op=document.createElement("option");
+		op.text="Kanpur";
+		se.add(op);
+		}
+		if(st.value==2)
+		{
+		var len=se.options.length;
+		for(i=len-1;i>=0;i--)
+		{
+		se.remove(i);
+		}
+		op=document.createElement("option");
+		op.text="Bhopal";
+		se.add(op);
+		op=document.createElement("option");
+		op.text="Vidisha";
+		se.add(op);
+		op=document.createElement("option");
+		op.text="Rewa";
+		se.add(op);
+		op=document.createElement("option");
+		op.text="Singraulii";
+		se.add(op);
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<select id="st" onchange="add()">
+	<option value="1">UP</option>
+	<option value="2">MP</option>
+	<option value="3">Bihar</option>
+	<option value="4">Bangal</option>
+	</select>
+	<select id="s"></select>
+	<p id="msg"></p>
+	<button onclick="add()">click</button>
+</body>
+</html>
